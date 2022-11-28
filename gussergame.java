@@ -202,21 +202,24 @@ class Call
 			System.out.println("Game Lost For Guessing Wrong Nos.");
 		}
 	}
-	void compareForallSameguess()
+	void compare()
 	{
 		if(u.numFromGuesser==u.numFromPlayer1)
 		{
 			if(u.numFromGuesser==u.numFromPlayer2 && u.numFromGuesser==u.numFromPlayer3)
 			{
-				System.out.println("All players guessed the Exact No.    So the Game is tied");
-				System.out.println("Play Again By Restarting the Game");
+				System.out.println("All players guessed the Exact No.    So the Game is tied..........");
+				System.out.println("Play Again .......");
+				u.collectNumFromGuesser();
+				u.collectNumFromPlayers();
+				compare2();
 				
 
 			}
 			else if(u.numFromGuesser==u.numFromPlayer2 )
 			{
 				System.out.println("The game is tied between Player 1 & Player2");
-				System.out.println("Player 1 & Player2 Please Choose the No. Again");
+				System.out.println("Player 1 & Player2 Please Choose the No. Again........");
 				u.collectNumFromGuesser();
 				u.collectNumFrmP1P2();
 				compareP1P2();
@@ -224,7 +227,7 @@ class Call
 			else if(u.numFromGuesser==u.numFromPlayer3)
 			{
 				System.out.println("The game is tied between Player 1 & Player3");
-				System.out.println("Player 1 & Player3 Please Choose the No. Again");
+				System.out.println("Player 1 & Player3 Please Choose the No. Again..........");
 				u.collectNumFromGuesser();
 				u.collectNumFrmP1P3();
 				compareP1P3();
@@ -239,7 +242,7 @@ class Call
 			if(u.numFromGuesser==u.numFromPlayer3)
 			{
 				System.out.println("The game is tied between Player 2 & Player3");
-				System.out.println("Player 2 & Player3 Please Choose the No. Again");
+				System.out.println("Player 2 & Player3 Please Choose the No. Again............");
 				u.collectNumFromGuesser();
 				u.collectNumFrmP3P2();
 				compareP3P2();
@@ -260,7 +263,7 @@ class Call
 	}
 
 
-    void comparee()
+    void compare2()
 	{
 		if(u.numFromGuesser==u.numFromPlayer1)
 		{
@@ -270,13 +273,13 @@ class Call
 				System.out.println("Play Again By Choosinging The Nos..");
 				u.collectNumFromGuesser();
 				u.collectNumFromPlayers();
-				compareForallSameguess();
+				compare();
 
 			}
 			else if(u.numFromGuesser==u.numFromPlayer2 )
 			{
 				System.out.println("The game is tied between Player 1 & Player2");
-				System.out.println("Player 1 & Player2 Please Choose the No. Again");
+				System.out.println("Player 1 & Player2 Please Choose the No. Again..........");
 				u.collectNumFromGuesser();
 				u.collectNumFrmP1P2();
 				compareP1P2();
@@ -284,7 +287,7 @@ class Call
 			else if(u.numFromGuesser==u.numFromPlayer3)
 			{
 				System.out.println("The game is tied between Player 1 & Player3");
-				System.out.println("Player 1 & Player3 Please Choose the No. Again");
+				System.out.println("Player 1 & Player3 Please Choose the No. Again..........");
 				u.collectNumFromGuesser();
 				u.collectNumFrmP1P3();
 				compareP1P3();
@@ -299,7 +302,7 @@ class Call
 			if(u.numFromGuesser==u.numFromPlayer3)
 			{
 				System.out.println("The game is tied between Player 2 & Player3");
-				System.out.println("Player 2 & Player3 Please Choose the No. Again");
+				System.out.println("Player 2 & Player3 Please Choose the No. Again.............");
 				u.collectNumFromGuesser();
 				u.collectNumFrmP3P2();
 				compareP3P2();
@@ -329,7 +332,7 @@ public class gussergame {
 			Call c = new Call();
 			
 			c.call();
-			c.comparee();
+			c.compare2();
 
 	}
 
